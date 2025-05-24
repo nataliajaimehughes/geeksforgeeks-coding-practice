@@ -1,0 +1,16 @@
+from math import sqrt
+
+class Solution:
+    def jugglerSequence(self, n):
+        res = [n]
+        
+        while n > 1:
+            if n % 2:
+                n = int(sqrt(n) * n)
+            
+            else:
+                n = int(sqrt(n))
+            
+            res.append(n)
+        
+        return res
